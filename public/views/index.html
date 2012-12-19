@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>CEDIP</title>
+  <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="js/formee.js"></script>
+  <link rel="stylesheet" href="css/formee-structure.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/formee-style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" href="css/blueberry.css" />
+  <link rel="stylesheet" type="text/css" href="../lib/reveal/reveal.css">
+  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  #header {
+    height: 60px;
+    padding-top: 20px; padding-bottom: 20px;
+    text-align: center;
+
+  }
+  #header h1 {
+    margin: 0 auto;
+    min-width: 740px;
+    max-width: 1140px;
+  }
+  #doc { margin: 40px 0; }
+  #content {
+    margin: 0 auto;
+    min-width: 740px;
+    max-width: 1140px;
+  }
+
+  .blueberry { max-width: 960px; }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script src="js/jquery.blueberry.js"></script>
+  <script src="../lib/reveal/jquery.reveal.js" type="text/javascript"></script>
+  <script>
+  $(window).load(function() {
+    $('.blueberry').blueberry();
+  });
+  </script>
+
+</head>
+
+<body>
+  <div id="barra_top"></div>
+  <div id="contenedor_principal">
+   <div id="header">
+    <div class="logo_top">
+     <img src="images/logo.png">
+   </div>
+   <div class="slogan_top">
+     <img src="images/slogan.png">
+   </div>
+   <div class="slogan_top2">
+     <img src="images/slogan2.png">
+   </div>
+   <ul class="menu">
+     <li><a id="btn" href="index.html"/>Institucional</a></li>
+     <li><a id="btn" href="noticias.html"/>Noticias</a></li>
+     <li><a id="btn" href="actividades.html"/>Actividades</a></li>
+     <li><a id="btn" href="contactos.html"/>Contactos</a></li>
+     <li><a id="btn" href="links.html"/>Links</a></li>
+     <li><a id="btn" href="https://www.facebook.com/centrodeestudiosydesarrollo/photos_stream"/>Fotos</a></li>
+     <li><a id="btn" href="#" onclick="$('#login-box').reveal();"/>Login</a></li>
+   </ul>
+ </div>
+ <div id="center">
+   <div class="blueberry">
+    <ul class="slides">
+      <li><img src="images/slide_1.png" /></li>
+      <li><img src="images/slide_2.png" /></li>
+      <li><img src="images/slide_3.png" /></li>
+      <li><img src="images/slide_4.png" /></li>
+      <li><img src="images/slide_5.png" /></li>
+    </ul>
+  </div> 
+  <div id="center_left">
+    <h1>¿Quiénes somos? Y toda la explicación de que hacemos.</h1>
+    <p>El Centro de Estudios, Investigación y Desarrollo Profesional nuclea a los jóvenes
+      estudiantes, profesionales y personas interesadas que desde una nueva perspectiva
+      intentan pensar y resignificar la realidad política y social que define nuestro tiempo.
+      Surge de la necesidad manifiesta de profesionales y futuros profesionales de crear
+      un espacio de debate y una mirada ampliada sobre la realidad, revalorizando el papel
+      fundamental de la educación (formal y no formal) como medio de acción para trasformar
+      la sociedad.</p>
+      <p>Muchos de los integrantes del Centro venimos de un origen humilde pero gracias al
+        esfuerzo económico de las familias y al esfuerzo propio, decidimos estudiar. Cuestión
+        que lejos de resumirse a una mejora económica, es también un deseo de mejora personal
+        que se suma a un deseo de participación en el espacio político y social. Desde este Centro
+        entendemos la política como un espacio de debate, de discusión donde el aporte de cada
+        mirada, de cada profesión, de cada experiencia de vida hace a un entendimiento más
+        global pero también más específico sobre los problemas que atañen a la vida en sociedad.
+        El trabajo del centro no se resume a una mera discusión y descripción sobre la realidad
+        desde distintas miradas, sino que también, y sobre todo, se propone planes de acción
+        directa sobre las discusiones mediante la planificación de investigaciones, puesta en
+        marcha, desarrollo y realización de proyectos que contribuyan a la mejora del espacio
+        político y social, y que resinifique las profesiones de cada uno de los integrantes en tanto
+        no se trata de sólo una mirada teórica, sino que se trata de una práctica sobre la realidad.
+        Cada encuentro se enmarca en un tema específico propuesto desde las necesidades
+        reales de pensar y trabajar sobre determinada cuestión, se debate, discute y se toma una
+        posición al respecto para plantear los posibles caminos de acción. Se distribuyen roles
+        y obligaciones en relación a los recursos disponibles y se inicia un plan de acción donde
+        todos los participantes son protagonistas.</p>
+
+        <p class="special">"El mundo lo construimos y hacemos entre todos."</p>
+      </div>
+      <div class="center_right">
+       <div class="links_social">
+         <a href="#"><img src="/images/facebook.png" /></a>
+       </div>
+       <div class="links_social">
+         <a href="#"><img src="/images/twitter.png" /></a>
+       </div>
+       <div class="links_social">
+         <img src="/images/contacto.png" />
+       </div>
+       <!-- formee-->
+       <form class="formee" action=""><br/><br/>
+        <fieldset>
+          <div class="grid-12-12">
+            <label>Nombre <em class="formee-req"></em></label>
+            <input type="text" value="" />
+          </div>
+          <div class="grid-12-12">
+            <label>E-mail <em class="formee-req"></em></label>
+            <input type="text" value="" />
+          </div>
+          <div class="grid-12-12">
+            <label>Telefono <em class="formee-req"></em></label>
+            <input type="text" value="" />
+          </div>
+
+          <div class="grid-12-12 clear">
+            <label>Comentario<em class="formee-req"></em></label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="grid-12-12">
+           <input class="right" type="submit" value="Enviar" />
+         </div>
+       </fieldset>  
+     </form>
+     <!-- formee-->
+   </div>  
+ </div>
+ <div id="footer">
+   <div class"linea_footer">
+     <ul class="menu_footer2">
+       <li><a id="btn2" href="index.html"/>Institucional</a></li>
+       <li><a id="btn2" href="noticias.html"/>Noticias</a></li>
+       <li><a id="btn2" href="actividades.html"/>Actividades</a></li>
+       <li><a id="btn2" href="contactos.html"/>Contactos</a></li>
+       <li><a id="btn2" href="links.html"/>Links</a></li>
+       <li><a id="btn2" href="https://www.facebook.com/centrodeestudiosydesarrollo/photos_stream"/>Fotos</a></li>
+       <li><a id="btn2" href="#" onclick="$('#login-box').reveal();"/>Login</a></li>
+     </ul>
+   </div>
+ </div>
+</div>
+<div id="login-box" class="login-popup reveal-modal">
+  <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+  <form method="post" class="signin" action="/user/login">
+    <fieldset class="textbox">
+      <label class="username">
+        <span>Username or email</span>
+        <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+      </label>
+      <label class="password">
+        <span>Password</span>
+        <input id="password" name="password" value="" type="password" placeholder="Password">
+      </label>
+      <button id="loginbtn" class="submit button" type="submit">Sign in</button>
+      <p>
+        <a class="forgot" href="#">Forgot your password?</a>
+      </p>        
+    </fieldset>
+  </form>
+</div>
+</body>

@@ -1,11 +1,12 @@
 require 'dm-validations'
 
-class Event
+class New
   include DataMapper::Resource
 
   property :id, Serial
   property :title, String
-  property :date, DateTime
+  property :description, Text
+  property :link, String
 
-  validates_presence_of :title
+  validates_presence_of :title, :description
 end

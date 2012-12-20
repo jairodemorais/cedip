@@ -29,11 +29,16 @@ get '/user/logout' do
 end
 
 get "/noticias" do
+  @news = New.all
 	erb :noticias
 end
 
 get "/actividades" do
 	erb :calendario
+end
+
+get "/contactos" do
+  erb :contactos
 end
 
 post '/project/mail' do
@@ -44,3 +49,26 @@ post '/project/mail' do
   flash("Mail enviado.")
   redirect '/'
 end
+
+post '/news/create' do
+  n = New.new
+  n.title = params["title"]
+  n.description = params["description"]
+  n.link = params["link"].start_with?("http://") ? params["link"] : "http://#{params['link']}"
+
+  if n.save
+    flash("Noticia creada")
+  else
+    tmp = []
+    n.errors.each do |e|
+      tmp << (e.join("<br/>"))
+    end
+    flash(tmp)
+  end
+  redirect '/noticias'
+end
+
+
+
+
+

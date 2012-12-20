@@ -12,7 +12,7 @@ namespace :db do
   end
   
   desc "Add some test users"
-  task :testusers do
+  task :testdata do
     us = User.new
     us.login = "test"
     us.email = "asdf@asdf.de"
@@ -24,6 +24,11 @@ namespace :db do
     as.email = "yes@asd.de"
     as.password = "bar"
     as.save
+
+    ev = Event.new
+    ev.title = "event"
+    ev.date = Time.now
+    ev.save
   end    
 end
     

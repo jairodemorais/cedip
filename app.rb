@@ -4,21 +4,30 @@ require 'data_mapper'
 require './config/database'
 require './helpers/sinatra'
 require './models/User'
+require 'erb'
+
+enable :sessions
 
 get "/" do
-  File.read(File.join('public', 'views', 'index.html'))
+	@user = session[:user]
+  erb :index
 end
 
 post '/user/login' do
   if session[:user] = User.authenticate(params["username"], params["password"])
     flash("Login successful")
-    redirect '/noticias'
   else
     flash("Login failed - Try again")
-    redirect '/'
   end
+  redirect '/'
+end
+
+get '/user/logout' do
+  session[:user] = nil
+  flash("Logout successful")
+  redirect '/'
 end
 
 get "/noticias" do
-  File.read(File.join('public', 'views', 'noticias.html'))
+	erb :noticias
 end

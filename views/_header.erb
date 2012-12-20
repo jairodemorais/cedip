@@ -1,0 +1,43 @@
+<div id="header">
+  <div class="logo_top">
+    <img src="images/logo.png">
+  </div>
+  <div class="slogan_top">
+    <img src="images/slogan.png">
+  </div>
+  <div class="slogan_top2">
+    <img src="images/slogan2.png">
+  </div>
+  <ul class="menu">
+    <li><a id="btn" href="/"/>Institucional</a></li>
+    <li><a id="btn" href="/noticias"/>Noticias</a></li>
+    <li><a id="btn" href="/actividades"/>Actividades</a></li>
+    <li><a id="btn" href="contactos.html"/>Contactos</a></li>
+    <li><a id="btn" href="links.html"/>Links</a></li>
+    <li><a id="btn" href="https://www.facebook.com/centrodeestudiosydesarrollo/photos_albums"/>Fotos</a></li>
+    <% if (@user.nil?) %>
+      <li><a id="btn" href="#" onclick="$('#login-box').reveal();"/>Login</a></li>
+    <%else%>
+      <li><a id="btn" href="#" onclick="$('#login-box').reveal();"/><%=@user.login%></a></li>
+    <%end%>
+  </ul>
+</div>
+<div id="login-box" class="login-popup reveal-modal">
+  <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+  <form method="post" class="signin" action="/user/login">
+    <fieldset class="textbox">
+      <label class="username">
+        <span>Username or email</span>
+        <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+      </label>
+      <label class="password">
+        <span>Password</span>
+        <input id="password" name="password" value="" type="password" placeholder="Password">
+      </label>
+      <button id="loginbtn" class="submit button" type="submit">Sign in</button>
+      <p>
+        <a class="forgot" href="#">Forgot your password?</a>
+      </p>        
+    </fieldset>
+  </form>
+</div>

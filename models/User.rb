@@ -28,10 +28,7 @@ class User
   
   def self.authenticate(login, pass)
     u = User.first(:login => login)
-    puts login
-    puts "NIL#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" if u.nil?
     return nil if u.nil?
-    puts User.encrypt(pass, u.salt) 
     return u if User.encrypt(pass, u.salt) == u.hashed_password
     nil
   end

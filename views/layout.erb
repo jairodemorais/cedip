@@ -33,7 +33,6 @@
 
 	  .blueberry { max-width: 960px; }
 	  </style>
-
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	  <script src="js/jquery.blueberry.js"></script>
 	  <script src="../lib/reveal/jquery.reveal.js" type="text/javascript"></script>
@@ -44,6 +43,28 @@
 	  </script>
   </head>
   <body>
-    <%= yield %>
+  	<div id="barra_top"></div>
+		<div id="contenedor_principal">
+			<!-- Render the partial callled header -->
+			<%= erb :_header %>
+  		<div id="center">
+  			<%= show_flash %>
+  			<%= yield %>
+	    	<div class="center_right">
+	      	<div class="links_social">
+	        	<a href="#"><img src="/images/facebook.png" /></a>
+	      	</div>
+	      	<div class="links_social">
+	        	<a href="#"><img src="/images/twitter.png" /></a>
+	      	</div>
+	      	<div class="links_social">
+	        	<img src="/images/contacto.png" />
+	      	</div>
+	      	<%= erb :_contact %>
+	    	</div>  
+			</div>
+		  <!-- Render the partial callled header -->
+			<%= erb :_footer %> 
+		</div>
   </body>
 </html>

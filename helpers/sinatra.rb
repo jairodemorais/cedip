@@ -1,6 +1,6 @@
 helpers do
   def logged_in?
-    return true if session[:user]
+    return !session[:user].nil?
     nil
   end
 

@@ -311,7 +311,8 @@
 		  height: 400,
 		  width: 400,
 		  modal: true,
-		  buttons: {    
+		  buttons: {
+		    <% if logged_in? %>    
 		    Cancel: function() {
 		      $(this).dialog('close');
 		    },
@@ -328,7 +329,8 @@
 		        }
 		        $(this).dialog('close');
 		      }
-		    }     
+		    }
+		    <% end %>     
 		  },
 		  open: function(event, ui){
 		    if(clickAgendaItem != null){

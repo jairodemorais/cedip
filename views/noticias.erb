@@ -1,24 +1,33 @@
 <div id="center_left">
-  <div class="noticias">
+  <div class="nueva_noticia">
     <% if logged_in? %>
-    <div class="id_noticia">
-      <h1>Nueva noticia</h1>
-      <form action="/news/create" method="post">
-        Titulo: <input type="text" name="title"/>
-        Descripcion: <textarea name="description"> </textarea>
-        Fb link: <input type="text" name="link"/>
+      <div class="id_noticia">
+        <h1>Nueva noticia</h1>
+        <form action="/news/create" method="post" class="formee">
+          <div class="grid-6-12">
+          <label>Titulo: <input type="text" name="title"/></label>
+        </div>
+        <div class="grid-6-12">
+          <label>Fb link: <input type="text" name="link"/></label>
+        </div>
+        <div class="grid-12-12">
+          <label>Descripcion: <textarea name="description"> </textarea></label>
+        </div>
         <input class="btn_vermas" type="submit" value="Crear" />
       </form>
     </div>
     <% end %>
-    <% @news.each do |p| %>
+  </div>   
+  <div class="noticias">
+  <% @news.each do |p| %>
     <div class="id_noticia">
       <h1><%=p.title%></h1>
       <p><%=p.description%></p>
       <div class="btn_vermas"><a href="<%=p.link%>">Ver mas</a></div>
     </div>
-    <%end%>
+  <%end%>
   </div>
 </div>
+<%= erb :_centerRight %>
 
 

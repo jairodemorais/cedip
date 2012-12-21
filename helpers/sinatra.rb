@@ -27,7 +27,7 @@ helpers do
     if session[:flash]
       tmp = session[:flash]
       session[:flash] = false
-      "<fieldset><legend>Notice</legend><p>#{tmp}</p></fieldset>"
+      "<fieldset class='logged_in'><p>#{tmp}</p></fieldset>"
     end
   end
 end

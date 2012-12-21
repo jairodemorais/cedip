@@ -44,19 +44,7 @@
 			<%= erb :_header %>
   		<div id="center">
   			<%= show_flash %>
-  			<%= yield %>
-	    	<div class="center_right">
-	      	<div class="links_social">
-	        	<a href="#"><img src="/images/facebook.png" /></a>
-	      	</div>
-	      	<div class="links_social">
-	        	<a href="#"><img src="/images/twitter.png" /></a>
-	      	</div>
-	      	<div class="links_social">
-	        	<img src="/images/contacto.png" />
-	      	</div>
-	      	<%= erb :_contact %>
-	    	</div>  
+  			<%= yield %>  
 			</div>
 		  <!-- Render the partial callled header -->
 			<%= erb :_footer %> 

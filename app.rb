@@ -38,7 +38,7 @@ get "/noticias" do
 end
 
 get "/actividades" do
-	erb :calendario, :layout => false
+	erb :calendario
 end
 
 get "/contactos" do

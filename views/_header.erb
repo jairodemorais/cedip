@@ -12,15 +12,13 @@
     <li><a id="btn" href="/"/>Institucional</a></li>
     <li><a id="btn" href="/noticias"/>Noticias</a></li>
     <li><a id="btn" href="/actividades"/>Actividades</a></li>
-    <li><a id="btn" href="/contactos"/>Contactos</a></li>
-    <li><a id="btn" href="links.html"/>Links</a></li>
     <li><a id="btn" href="https://www.facebook.com/centrodeestudiosydesarrollo/photos_albums"/>Fotos</a></li>
     <% if (session[:user].nil?) %>
       <li><a id="btn_login" href="#" onclick="$('#login-box').reveal();"/>Login</a></li>
     <%else%>
       <li>
-        <a id="btn" href="#" onclick="$('#login-box').reveal();"/><%=session[:user].login%></a> 
-        <a href="/user/logout" >logout</a>
+        <a id="btn_login" href="/user/logout" >logout</a>
+        
       </li>
     <%end%>
   </ul>

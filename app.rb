@@ -35,7 +35,7 @@ get "/noticias" do
 end
 
 get "/actividades" do
-	erb :calendario
+	erb :calendario, :layout => false
 end
 
 get "/contactos" do
@@ -87,6 +87,7 @@ post '/events/create' do
     flash("Evento creado")
     n.to_json
   else
+    status 400
     tmp = []
     n.errors.each do |e|
       tmp << (e.join("<br/>"))
@@ -97,15 +98,17 @@ post '/events/create' do
 end
 
 post '/events/delete' do
-  Event.get(params["id"])
+  content_type :json
+  n = Event.get(params["id"])
   if n.destroy
     flash("Evento eliminado")
   else
+    status 404
     tmp = []
     n.errors.each do |e|
       tmp << (e.join("<br/>"))
     end
-    flash(tmp)
+    flash(tmp).to_json
   end
 end
 

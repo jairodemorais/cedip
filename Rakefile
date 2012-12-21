@@ -27,7 +27,8 @@ namespace :db do
 
     ev = Event.new
     ev.title = "event"
-    ev.date = Time.now
+    ev.start_date = Time.now
+    ev.end_date = Time.now
     ev.save
   end    
 end

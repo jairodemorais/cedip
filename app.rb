@@ -6,6 +6,7 @@ require './helpers/sinatra'
 require './models/User'
 require 'erb'
 require 'pony'
+require 'json'
 
 enable :sessions
 
@@ -66,6 +67,46 @@ post '/news/create' do
     flash(tmp)
   end
   redirect '/noticias'
+end
+
+get '/events/getAll' do
+  content_type :json
+  Event.all.to_json
+end
+
+post '/events/create' do
+  content_type :json
+  n = Event.new
+  n.title = params["title"]
+  n.start_date = params["startDate"]
+  n.end_date = params["endDate"]
+  n.background_color = params["bcolor"]
+  n.fore_color = params["fcolor"]
+
+  if n.save
+    flash("Evento creado")
+    n.to_json
+  else
+    tmp = []
+    n.errors.each do |e|
+      tmp << (e.join("<br/>"))
+    end
+    flash(tmp)
+    tmp.to_json
+  end
+end
+
+post '/events/delete' do
+  Event.get(params["id"])
+  if n.destroy
+    flash("Evento eliminado")
+  else
+    tmp = []
+    n.errors.each do |e|
+      tmp << (e.join("<br/>"))
+    end
+    flash(tmp)
+  end
 end
 
 

@@ -5,7 +5,10 @@ class Event
 
   property :id, Serial
   property :title, String
-  property :date, DateTime
+  property :start_date, DateTime
+  property :end_date, DateTime
+  property :background_color, String
+  property :fore_color, String
 
-  validates_presence_of :title
+  validates_presence_of :title, :start_date, :end_date
 end

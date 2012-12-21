@@ -10,6 +10,8 @@ require 'pony'
 require 'json'
 
 enable :sessions
+set :mail_user, 'userName'
+set :mail_pass, 'password'
 
 get "/" do
   erb :index
@@ -44,7 +46,16 @@ get "/contactos" do
 end
 
 post '/project/mail' do
-  Pony.mail :to => 'jairodemorais@gmail.com',
+  Pony.mail :via => :smtp,
+            :via_options => {
+              :address        => 'smtp.gmail.com',
+              :port           => '25',
+              :user_name      => settings.mail_user,
+              :password       => settings.mail_pass,
+              :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
+              :domain         => "HELO" # the HELO domain provided by the client to the server
+            },
+            :to => 'jairodemorais@gmail.com',
             :from => params[:mail],
             :subject => "Un nuevo proyecto ha sido presentado por #{params[:name]}.",
             :body => "Descripcion del proyecto: #{params[:description]}. \n Datos de contacto: \n Mail: #{params[:mail]} \n Telefono: #{params[:phone]}"

@@ -1,7 +1,0 @@
-gem install data_mapper
-gem install dm-mysql-adapter
-gem install dm-core
-gem install dm-migrations
-gem install dm-validations
-gem install pony
-gem install json

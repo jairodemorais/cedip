@@ -52,7 +52,7 @@
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
 .ui-widget-content { border: 1px solid #aaaaaa; background: white  50% 50% repeat-x; color: #222222; }
 .ui-widget-content a { color: #222222; }
-.ui-widget-header {  background: #018BB9  50% 50% repeat-x; color: #222222; font-weight: bold;margin-bottom: 20px; }
+.ui-widget-header {  background: #018BB9  50% 50% repeat-x; color:white; font-weight: bold;margin-bottom: 20px; }
 .ui-widget-header a { color: #222222; }
 
 /* Interaction states
@@ -382,11 +382,11 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 /* Dialog
 ----------------------------------*/
-.ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
-.ui-dialog .ui-dialog-titlebar { padding: .5em 1em .3em; position: relative;  }
-.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .2em 0; } 
+.ui-dialog { position: absolute; padding: .2em; width: 400px; overflow: hidden;font-family: 'Rambla', sans-serif; color: white;}
+.ui-dialog .ui-dialog-titlebar { padding: .5em 1em .3em; position: relative; font-family: 'Rambla', sans-serif; }
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .2em 0; font-family: 'Rambla', sans-serif;} 
 .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
-.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px;color:white; }
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
 .ui-dialog .ui-dialog-content { border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
 .ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }

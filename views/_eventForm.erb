@@ -1,19 +1,19 @@
 <div id="add-event-form" title="Crear Evento nuevo">
-  <p class="validateTips">Todos los campos son obligatorios..</p>
+  <p class="validateTips" style="margin-top:-10px;"><b>Todos los campos son obligatorios..</b></p>
   <form>
-  <fieldset>
-    <label for="name">Titulo</label>
-    <input type="text" name="what" id="what" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>
-    <table style="width:100%; padding:5px;">
+  <fieldset style="margin-top:-20px;">
+    <label for="name" style=";">Titulo</label>
+    <input type="text" name="what" id="what" class="formee" style="margin-bottom:12px; width:330px; padding: .2em;"/>
+    <table style="width:100%; padding:2px;">
       <tr>
         <td>
           <label>Fecha de inicio</label>
-          <input type="text" name="startDate" id="startDate" value="" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>        
+          <input type="text" name="startDate" id="startDate" value="" class="formee" style="margin-bottom:12px; width:100px; padding: .2em;"/>        
         </td>
         <td>&nbsp;</td>
         <td>
           <label>Hora</label>
-          <select id="startHour" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+          <select id="startHour" class="formee" style="margin-bottom:12px; width:70px; padding: .2em; ">
             <option value="12" SELECTED>12</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -30,7 +30,7 @@
         <td>
         <td>
           <label>Minutos</label>
-          <select id="startMin" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+          <select id="startMin" class="formee" style="margin-bottom:12px; width:70px; padding: .2em; margin-left:5px;">
             <option value="00" SELECTED>00</option>
             <option value="10">10</option>
             <option value="20">20</option>
@@ -41,7 +41,7 @@
         <td>
         <td>
           <label>AM/PM</label>
-          <select id="startMeridiem" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+          <select id="startMeridiem" class="formee" style="margin-bottom:12px; width:70px; padding: .2em; margin-left:5px;">
             <option value="AM" SELECTED>AM</option>
             <option value="PM">PM</option>
           </select>       
@@ -50,12 +50,12 @@
       <tr>
         <td>
           <label>Fecha de cierre</label>
-          <input type="text" name="endDate" id="endDate" value="" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;"/>        
+          <input type="text" name="endDate" id="endDate" value="" class="formee" style="margin-bottom:12px; width:100px; padding: .2em;"/>        
         </td>
         <td>&nbsp;</td>
         <td>
           <label>Hora</label>
-          <select id="endHour" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+          <select id="endHour" class="formee" style="margin-bottom:12px; width:70px; padding: .2em;">
             <option value="12" SELECTED>12</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -72,7 +72,7 @@
         <td>
         <td>
           <label>Minutos</label>
-          <select id="endMin" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+          <select id="endMin" class="formee" style="margin-bottom:12px; width:70px; padding: .2em;margin-left:5px;">
             <option value="00" SELECTED>00</option>
             <option value="10">10</option>
             <option value="20">20</option>
@@ -83,7 +83,7 @@
         <td>
         <td>
           <label>End AM/PM</label>
-          <select id="endMeridiem" class="text ui-widget-content ui-corner-all" style="margin-bottom:12px; width:95%; padding: .4em;">
+          <select id="endMeridiem" class="formee" style="margin-bottom:12px; width:70px; padding: .2em;margin-left:5px;">
             <option value="AM" SELECTED>AM</option>
             <option value="PM">PM</option>
           </select>       
@@ -93,7 +93,7 @@
     <table>
       <tr>
         <td>
-          <label>Background Color</label>
+          <label>Background Color &nbsp;</label>
         </td>
         <td>
           <div id="colorSelectorBackground"><div style="background-color: #333333; width:30px; height:30px; border: 2px solid #000000;"></div></div>
@@ -101,7 +101,7 @@
         </td>
         <td>&nbsp;&nbsp;&nbsp;</td>
         <td>
-          <label>Text Color</label>
+          <label>Text Color &nbsp;</label>
         </td>
         <td>
           <div id="colorSelectorForeground"><div style="background-color: #ffffff; width:30px; height:30px; border: 2px solid #000000;"></div></div>

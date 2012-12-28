@@ -2,6 +2,23 @@
 $(window).load(function() {
   $('.blueberry').blueberry();
 });
+
+
+$(document).ready(function () {
+  var list = ['first blurb', 'second blurb', 'third blurb'];  // list of blurbs
+
+  var txt = $('#txtlzr');  // The container in which to render the list
+
+  var options = {
+    duration: 1000,          // Time (ms) each blurb will remain on screen
+    rearrangeDuration: 500, // Time (ms) a character takes to reach its position
+    effect: 'random',        // Animation effect the characters use to appear
+    centered: true           // Centers the text relative to its container
+  }
+
+  txt.textualizer(list, options); // textualize it!
+  txt.textualizer('start'); // start
+});
 </script>
 
 <div class="blueberry">
@@ -22,24 +39,7 @@ Surge de la necesidad manifiesta de profesionales y futuros profesionales de cre
 un espacio de debate y una mirada ampliada sobre la realidad, revalorizando el papel
 fundamental de la educaci&oacute;n (formal y no formal) como medio de acci&oacute;n para trasformar
 la sociedad.</p>
-<p>Muchos de los integrantes del Centro venimos de un origen humilde pero gracias al
-  esfuerzo econ&oacute;mico de las familias y al esfuerzo propio, decidimos estudiar. Cuesti&oacute;n
-  que lejos de resumirse a una mejora econ&oacute;mica, es tambi&eacute;n un deseo de mejora personal
-  que se suma a un deseo de participaci&oacute;n en el espacio pol&iacute;tico y social. Desde este Centro
-  entendemos la pol&iacute;tica como un espacio de debate, de discusi&oacute;n donde el aporte de cada
-  mirada, de cada profesi&oacute;n, de cada experiencia de vida hace a un entendimiento m&aacute;s
-  global pero tambi&eacute;n m&aacute;s espec&iacute;fico sobre los problemas que ata&ntilde;en a la vida en sociedad.
-  El trabajo del centro no se resume a una mera discusi&oacute;n y descripci&oacute;n sobre la realidad
-  desde distintas miradas, sino que tambi&eacute;n, y sobre todo, se propone planes de acci&oacute;n
-  directa sobre las discusiones mediante la planificaci&oacute;n de investigaciones, puesta en
-  marcha, desarrollo y realizaci&oacute;n de proyectos que contribuyan a la mejora del espacio
-  pol&iacute;tico y social, y que resinifique las profesiones de cada uno de los integrantes en tanto
-  no se trata de s&oacute;lo una mirada te&oacute;rica, sino que se trata de una pr&aacute;ctica sobre la realidad.
-  Cada encuentro se enmarca en un tema espec&iacute;fico propuesto desde las necesidades
-  reales de pensar y trabajar sobre determinada cuesti&oacute;n, se debate, discute y se toma una
-  posici&oacute;n al respecto para plantear los posibles caminos de acci&oacute;n. Se distribuyen roles
-  y obligaciones en relaci&oacute;n a los recursos disponibles y se inicia un plan de acci&oacute;n donde
-  todos los participantes son protagonistas.</p>
+<div id="txtlzr"> </div>
 
 <p class="special">"El mundo lo construimos y hacemos entre todos."</p>
 </div>

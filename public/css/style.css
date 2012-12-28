@@ -220,3 +220,11 @@ fieldset.logged_in{background-color:lightblue; margin-top: -15px; margin-bottom:
 
 
 fieldset.logged_in p{padding-left:10px; padding-top: 15px; padding-right: 10px; padding-bottom: 10px;}
+
+#txtlzr {
+font-family: 'Arial',sans-serif;
+margin-top: 20px;
+font-size: 30px;
+width: 700px;
+height: 120px;
+}

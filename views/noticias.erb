@@ -1,21 +1,7 @@
 <div id="center_left">
   <div class="nueva_noticia">
     <% if logged_in? %>
-      <div class="id_noticia">
-        <h1>Nueva noticia</h1>
-        <form action="/news/create" method="post" class="formee">
-          <div class="grid-6-12">
-          <label>Titulo: <input type="text" name="title"/></label>
-        </div>
-        <div class="grid-6-12">
-          <label>Fb link: <input type="text" name="link"/></label>
-        </div>
-        <div class="grid-12-12">
-          <label>Descripcion: <textarea name="description"> </textarea></label>
-        </div>
-        <input class="btn_vermas" type="submit" value="Crear" />
-      </form>
-    </div>
+      <%= erb :_newsForm %> 
     <% end %>
   </div>   
   <div class="noticias">

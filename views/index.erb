@@ -23,11 +23,17 @@ $(document).ready(function () {
 
 <div class="blueberry">
   <ul class="slides">
-    <li><img src="images/slide_1.png" /></li>
-    <li><img src="images/slide_2.png" /></li>
-    <li><img src="images/slide_3.png" /></li>
-    <li><img src="images/slide_4.png" /></li>
-    <li><img src="images/slide_5.png" /></li>
+    <% if @news.nil? %>
+      <li><img src="images/slide_1.png" /></li>  
+      <li><img src="images/slide_2.png" /></li>
+      <li><img src="images/slide_3.png" /></li>
+      <li><img src="images/slide_4.png" /></li>
+      <li><img src="images/slide_5.png" /></li>
+    <% else %>
+      <% @news.each do |p| %>
+        <li><img src="<%= p.photo.url(:large) %>" /></li> 
+      <% end %>
+    <% end %>
   </ul>
 </div> 
 <div id="center_left">

@@ -90,7 +90,11 @@ font-family:Arial, Helvetica, sans-serif;
 font-size:12px;
 display: block;
 background-color:#999999;
+<<<<<<< HEAD
 width:156px;
+=======
+width:150px;
+>>>>>>> bf9c0e69ef9cd4761f8164970b95a6acc4ceef4b
 height:23px;
 margin:-1px; 
 text-decoration:none;
@@ -221,3 +225,11 @@ fieldset.logged_in{background-color:lightblue; margin-top: -15px; margin-bottom:
 
 
 fieldset.logged_in p{padding-left:10px; padding-top: 15px; padding-right: 10px; padding-bottom: 10px;}
+
+#txtlzr {
+font-family: 'Arial',sans-serif;
+margin-top: 20px;
+font-size: 30px;
+width: 700px;
+height: 120px;
+}

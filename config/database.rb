@@ -1,8 +1,5 @@
 require 'rubygems'
 require 'dm-core'
-require './models/User'
-require './models/Event'
-require './models/New'
 
 DataMapper::Logger.new(STDOUT, :debug)
 

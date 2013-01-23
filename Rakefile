@@ -1,7 +1,16 @@
 require 'rubygems'
+require "bundler/setup"
 require 'sinatra'
-require 'dm-core'
-require 'dm-migrations'
+require 'data_mapper'
+require 'dm-paperclip'
+require './config/database'
+require './helpers/sinatra'
+require 'erb'
+require 'pony'
+require 'json'
+require './models/User'
+require './models/Event'
+require './models/New'
 
 namespace :db do
   require './config/database'
@@ -30,6 +39,13 @@ namespace :db do
     ev.start_date = Time.now
     ev.end_date = Time.now
     ev.save
+
+    nw = New.new
+    nw.title = "the new new new"
+    nw.show = false
+    nw.description = "La description es muy corta papa"
+    nw.link = "www.facebook.com.ar"
+    nw.save
   end    
 end
     

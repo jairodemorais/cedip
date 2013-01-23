@@ -5,13 +5,25 @@ $(window).load(function() {
 
 
 $(document).ready(function () {
-  var list = ['first blurb', 'second blurb', 'third blurb'];  // list of blurbs
+  var list = [
+  "El sabio no dice nunca todo lo que piensa, pero piensa todo lo que dice. Aristóteles",
+  "La violencia es el miedo a los ideales de los demás. Gandhi",
+  "Actúa en vez de suplicar. Sacrifícate sin esperanza de gloria ni recompensa. Si quieres conocer los milagros, hazlos tú antes. Sólo así podrá cumplirse tu peculia destino. Beethoven",
+  "Y todo lo que aún no ha nacido puede nacer todavía siempre que no nos contentemos con ser simples órganos de repetición. Antonin Artaud",
+  "La actitud ante este algo no decidido, pero decidible por el trabajo y la acción mediata se llama optimismo militante. Ernest Bloh",
+  "En cuestiones de cultura y saber sólo se pierde lo que se guarda; sólo se gana lo que se da. Antonio Machado",
+  "¿Entonces para qué sirve la utopía? Para eso. Sirve para avanzar. Eduardo Galeano",
+  "El que no cultiva su mente, va derecho a la disgregación de su personalidad. No desbaratar la propia ignorancia es perecer en vida. José Ingenieros",
+  "Los que sueñan de día son consientes de muchas cosas que escapan a los que sueñan sólo de noche. Edgar Allan Poe",
+  "Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo. Benjamin Franklin",
+  "La cultura no es atributo exclusivo de la burguesía. Los llamados 'ignorantes' son hombres y mujeres cultos a los que se les ha negado el derecho de expresarse y por ello son sometidos a vivir en una 'cultura del silencio'. Paulo Freire",
+  "El objeto de la educación es formar seres aptos para gobernarse a sí mismos, y no para ser gobernados por los demás. Herbert Spencer"];  // list of blurbs
 
   var txt = $('#txtlzr');  // The container in which to render the list
 
   var options = {
     duration: 1000,          // Time (ms) each blurb will remain on screen
-    rearrangeDuration: 500, // Time (ms) a character takes to reach its position
+    rearrangeDuration: 300, // Time (ms) a character takes to reach its position
     effect: 'random',        // Animation effect the characters use to appear
     centered: true           // Centers the text relative to its container
   }
@@ -23,7 +35,7 @@ $(document).ready(function () {
 
 <div class="blueberry">
   <ul class="slides">
-    <% if @news.nil? %>
+    <% if @news.size == 0 %>
       <li><img src="images/slide_1.png" /></li>  
       <li><img src="images/slide_2.png" /></li>
       <li><img src="images/slide_3.png" /></li>
@@ -37,14 +49,14 @@ $(document).ready(function () {
   </ul>
 </div> 
 <div id="center_left">
-<h1>&iquest;Qui&eacute;nes somos? Y toda la explicaci&oacute;n de que hacemos.</h1>
-<p>El Centro de Estudios, Investigaci&oacute;n y Desarrollo Profesional nuclea a los j&oacute;venes
-estudiantes, profesionales y personas interesadas que desde una nueva perspectiva
-intentan pensar y resignificar la realidad pol&iacute;tica y social que define nuestro tiempo.
-Surge de la necesidad manifiesta de profesionales y futuros profesionales de crear
-un espacio de debate y una mirada ampliada sobre la realidad, revalorizando el papel
-fundamental de la educaci&oacute;n (formal y no formal) como medio de acci&oacute;n para trasformar
-la sociedad.</p>
+<h1>Objectivos Principales. </h1>
+<ul>
+  <li>Promover la actividad académica de grado y/o terciaria delos estudiantes que se encuentren transitando el último año de la enseñanza secundaria.</li>
+  <li>Incentivar por vías del estudio un futuro desarrollo laboral.</li>
+  <li>Introducir en las escuelas las ofertas de educación superior, dentro de una actividad pedagógica y de recreación con los estudiantes.</li>
+  <li>Abrir el espectro universitario local.</li>
+  <li>Fortalecer las instituciones educativas, recreando una actividad que fomente la inserción profesional y continúe con una cultura de estudio.</li>
+</ul>
 <div id="txtlzr"> </div>
 
 <p class="special">"El mundo lo construimos y hacemos entre todos."</p>

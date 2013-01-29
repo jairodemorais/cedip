@@ -55,6 +55,10 @@ get "/aboutus" do
   erb :nosotros
 end
 
+get "/links" do
+  erb :links
+end
+
 post '/project/mail' do
   Pony.mail :via => :smtp,
             :via_options => {

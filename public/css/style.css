@@ -66,7 +66,7 @@ font-family:Arial, Helvetica, sans-serif;
 font-size:12px;
 display: block;
 background-color:#018BB9;
-width:156px;
+width:130px;
 height:23px;
 margin:-1px; 
 text-decoration:none;
@@ -85,7 +85,7 @@ font-family:Arial, Helvetica, sans-serif;
 font-size:12px;
 display: block;
 background-color:#999999;
-width:156px;
+width:134px;
 height:23px;
 margin:-1px; 
 text-decoration:none;
@@ -220,7 +220,76 @@ fieldset.logged_in p{padding-left:10px; padding-top: 15px; padding-right: 10px; 
 #txtlzr {
 font-family: 'Arial',sans-serif;
 margin-top: 20px;
-font-size: 30px;
+font-size: 20px;
 width: 650px;
 height: 120px;
+}
+
+#objective-title {
+  color: gray;
+  margin-left: 48px;
+}
+
+div.number-list {
+  width: 571px;
+  margin: 0px
+}
+ 
+div.number-list ol {
+  color: #ccc;
+  list-style-type: none;
+}
+ 
+div.number-list ol li {
+  position: relative;
+  font: bold italic 25px/1.5 Helvetica, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+ 
+div.number-list li p {
+  font: 12px/1.5 Helvetica, sans-serif;
+  padding-left: 40px;
+  color: #555;
+}
+ 
+div.number-list span {
+  position: absolute;
+}
+
+.innercontent {
+  padding: 0 0 0 650px; /* 75px being the width of the thumbnail + how much space you want to put between it and your text */
+  position: relative; /* So the thumbnail is relative to this */
+}
+
+.innercontent img {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.innercontent div {
+  padding-left: 10px;
+  width: 285px;
+  min-height: 200px;
+  background-color: blue;
+  margin: 0px;
+}
+
+#jcarousel {
+    position: relative;
+    overflow: hidden;
+    /* You need at least a height, adjust this to your needs */
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#jcarousel ul {
+    width: 20000em;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#jcarousel li {
+    float: left;
 }

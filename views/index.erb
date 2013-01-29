@@ -1,10 +1,24 @@
 <script>
-$(window).load(function() {
-  $('.blueberry').blueberry();
-});
-
+function mycarousel_initCallback(carousel)
+{
+  // Pause autoscrolling if the user moves with the cursor over the clip.
+  carousel.clip.hover(function() {
+      carousel.stopAuto();
+  }, function() {
+      carousel.startAuto();
+  });
+};
 
 $(document).ready(function () {
+  $('#jcarousel').jcarousel({
+    animation: {
+        'duration': 800,
+        'easing':   'linear'
+    },
+    auto: 3,
+    wrap: 'circular',
+    initCallback: mycarousel_initCallback
+  }).jcarouselAutoscroll({});
   var list = [
   "El sabio no dice nunca todo lo que piensa, pero piensa todo lo que dice. Aristóteles",
   "La violencia es el miedo a los ideales de los demás. Gandhi",
@@ -22,8 +36,8 @@ $(document).ready(function () {
   var txt = $('#txtlzr');  // The container in which to render the list
 
   var options = {
-    duration: 1000,          // Time (ms) each blurb will remain on screen
-    rearrangeDuration: 300, // Time (ms) a character takes to reach its position
+    duration: 2000,          // Time (ms) each blurb will remain on screen
+    rearrangeDuration: 200, // Time (ms) a character takes to reach its position
     effect: 'random',        // Animation effect the characters use to appear
     centered: true           // Centers the text relative to its container
   }
@@ -33,8 +47,8 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="blueberry">
-  <ul class="slides">
+<div id="jcarousel">
+  <ul>
     <% if @news.size == 0 %>
       <li><img src="images/slide_1.png" /></li>  
       <li><img src="images/slide_2.png" /></li>
@@ -43,20 +57,28 @@ $(document).ready(function () {
       <li><img src="images/slide_5.png" /></li>
     <% else %>
       <% @news.each do |p| %>
-        <li><img src="<%= p.photo.url(:large) %>" /></li> 
+         <li class="innercontent">
+          <img src="<%= p.photo.url(:large) %>" width="650px" height="200px"/>
+          <div>
+            <h3><%= p.title %></h3>
+            <p><%= p.description %></p>
+          <div>
+        </li> 
       <% end %>
     <% end %>
   </ul>
 </div> 
 <div id="center_left">
-<h1>Objectivos Principales. </h1>
-<ul>
-  <li>Promover la actividad académica de grado y/o terciaria delos estudiantes que se encuentren transitando el último año de la enseñanza secundaria.</li>
-  <li>Incentivar por vías del estudio un futuro desarrollo laboral.</li>
-  <li>Introducir en las escuelas las ofertas de educación superior, dentro de una actividad pedagógica y de recreación con los estudiantes.</li>
-  <li>Abrir el espectro universitario local.</li>
-  <li>Fortalecer las instituciones educativas, recreando una actividad que fomente la inserción profesional y continúe con una cultura de estudio.</li>
-</ul>
+<h2 id="objective-title">Objectivos Principales. </h2>
+<div class="number-list">
+  <ol>
+    <li><span>1.</span><p>Promover la actividad académica de grado y/o terciaria delos estudiantes que se encuentren transitando el último año de la enseñanza secundaria.</p></li>
+    <li><span>2.</span><p>Desarrollar un ambiente de cordialidad y solidaridad entre sus asociados y propender al mejoramiento intelectual y cultural de los mismos.</p></li>
+    <li><span>3.</span><p>Introducir en las escuelas las ofertas de educación superior, dentro de una actividad pedagógica y de recreación con los estudiantes.</p></li>
+    <li><span>4.</span><p>Propulsar la cultura desarrollando toda clase de encuentros y charlas fomentándolas entre la población y en especial entre los jóvenes.</p></li>
+    <li><span>5.</span><p>Fortalecer las instituciones educativas, recreando una actividad que fomente la inserción profesional y continúe con una cultura de estudio.</p></li>
+  </ol>
+</div>
 <div id="txtlzr"> </div>
 
 <p class="special">"El mundo lo construimos y hacemos entre todos."</p>

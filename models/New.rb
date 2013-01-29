@@ -13,8 +13,8 @@ class New
   has_attached_file :photo,
                     :styles => {
                       :thumb=> "50x45#",
-                      :medium => "110x100>",
-                      :large =>  "250x250>}"
+                      :medium => "110x100#",
+                      :large =>  "550x310#{}"
                     },
                     :url => "/system/:attachment/:id/:style/:basename.:extension",
                     :path => "#{settings.root}/public/system/:attachment/:id/:style/:basename.:extension"

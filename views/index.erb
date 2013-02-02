@@ -59,7 +59,7 @@ $(document).ready(function () {
       <% @news.each do |p| %>
          <li class="innercontent">
           <img src="<%= p.photo.url(:large) %>" width="650px" height="200px"/>
-          <div>
+          <div style="margin-top:20px;">
             <h3><%= p.title %></h3>
             <p><%= p.description %></p>
           <div>

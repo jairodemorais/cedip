@@ -367,10 +367,11 @@
 	</script>
 </head>
 <div id="toolbar" class="ui-widget-header ui-corner-all" style="padding:3px; vertical-align: middle; white-space:nowrap; overflow: hidden;">
-	<button id="BtnPreviousMonth">Anterior</button>
-	<button id="BtnNextMonth">Siguiente</button>&nbsp;&nbsp;&nbsp;
+	<button id="BtnPreviousMonth"><</button>
+	
 
-	<label class="datee">Date:  &nbsp; &nbsp; </label> <input style=" padding:5px;" type="text" id="dateSelect" />&nbsp;&nbsp;&nbsp;
+	<label class="datee">&nbsp; &nbsp; Seleccione la fecha:&nbsp;  </label> <input style=" padding:5px;" type="text" id="dateSelect" />&nbsp;&nbsp;&nbsp;
+	<button id="BtnNextMonth">></button>&nbsp;&nbsp;&nbsp;
 </div>
 <div id="calendar"></div>
 <%= erb :_eventForm %>

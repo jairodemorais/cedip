@@ -13,6 +13,17 @@ font-family: 'Rambla', sans-serif;
 font-size:33px;
 margin-bottom:20px;
 }
+
+#center_left h2{
+font-family: 'Rambla', sans-serif;
+font-size: 22px;
+color: #069;
+margin-bottom: 10px;
+
+
+
+
+}
 p{font-family: 'Rambla', sans-serif; font-size:16px;
 margin-bottom:25px; color:#333;}
 p.special{font-family: 'Rambla', sans-serif; font-size:18px;
@@ -146,6 +157,8 @@ margin-top:20px;
 }
 
 #center_left{width:650px; float:left;margin-right:30px;}
+#center_left h3{font-family: 'Rambla', sans-serif; }
+#center_left ul li{font-family: 'Rambla', sans-serif; margin-top: 15px;  }
 #center_right{width:265px; float:left;}
 #center_buttom{
 margin-top:25px;
@@ -218,20 +231,26 @@ fieldset.logged_in{background-color:lightblue; margin-top: -15px; margin-bottom:
 fieldset.logged_in p{padding-left:10px; padding-top: 15px; padding-right: 10px; padding-bottom: 10px;}
 
 #txtlzr {
-font-family: 'Arial',sans-serif;
+  
+  
+  
+font-family: 'Rambla',sans-serif;
 margin-top: 20px;
-font-size: 20px;
+font-size: 32px;
 width: 650px;
-height: 120px;
+height: 160px;
+text-align: center;
+color:grey;
 }
 
 #objective-title {
   color: gray;
-  margin-left: 48px;
+  margin-left: 0px;
+  font-family:'Rambla', sans-serif;  
 }
 
 div.number-list {
-  width: 571px;
+  
   margin: 0px
 }
  
@@ -241,14 +260,14 @@ div.number-list ol {
 }
  
 div.number-list ol li {
-  position: relative;
+  position: absoulute;
   font: bold italic 25px/1.5 Helvetica, Verdana, sans-serif;
   margin-bottom: 20px;
 }
  
 div.number-list li p {
-  font: 12px/1.5 Helvetica, sans-serif;
-  padding-left: 40px;
+  font: 16px/1.5 'Rambla', sans-serif;
+  padding-left: 30px;
   color: #555;
 }
  
@@ -270,17 +289,21 @@ div.number-list span {
   padding-left: 10px;
   width: 285px;
   min-height: 200px;
-  background-color: blue;
-  margin: 0px;
+  
 }
 
 #jcarousel {
     position: relative;
     overflow: hidden;
     /* You need at least a height, adjust this to your needs */
-    height: 200px;
+    height: 250px;
     margin-bottom: 20px;
+    background-image: url("../images/line_carousel_pink.png");
 }
+    #jcarousel img {
+    
+    height: 250px;
+    }
 
 #jcarousel ul {
     width: 20000em;
@@ -292,4 +315,21 @@ div.number-list span {
 
 #jcarousel li {
     float: left;
+
 }
+ #jcarousel h3{
+  float:left;
+  font-family: arial, sans-serif;
+  width: 100%;
+color:white;
+ }   
+
+  #jcarousel p{
+  float:left;
+  font-family: arial, sans-serif;
+  width: 90%;
+color:white;
+font-size: 12px;
+ }   
+
+div.number-list ul li span {float: left; margin-right: 10px; font-size: 16px; color:red;}
